@@ -1,0 +1,102 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --font-head: 4.8rem;
+  --font-body: 2.4rem;
+  --font-xxlg: 7.2rem;
+
+  --red: hsl(348, 100%, 61%);
+  --blue: hsl(218, 96%, 64%);
+  --green: hsl(154, 91%, 40%);
+  --yellow: hsl(48, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --gray6: hsl(200, 20%, 9%);
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  font-size: var(--font-body);
+  background-color: var(--white);
+  color: var(--white);
+  font-weight: 700;
+}
+
+hr {
+  width: 100%;
+  border: 2px solid var(--white);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--gray6);
+}
+
+.text-yellow {
+  color: var(--yellow);
+}
+
+.app__wrapper {
+  margin: 16rem 32rem;
+  padding: 8rem;
+  flex-direction: column;
+  background: var(--blue);
+}
+
+.app__heading {
+  font-size: var(--font-head);
+}
+
+.app__result {
+  margin: 2rem 0 1rem 0;
+  font-size: var(--font-xxlg);
+  color: var(--yellow);
+}
+
+.app__form {
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.form__control {
+  padding: 1rem;
+  font-size: var(--font-body);
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+.form__message {
+  color: var(--red);
+}
+
+.app__btn {
+  margin-top: 6rem;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-transform: uppercase;
+  background: var(--white);
+  color: var(--gray6);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.app__btn:hover {
+  transform:scale(1.2);
+}

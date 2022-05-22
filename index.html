@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Number Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles.css">
+  
+</head>
+<body>
+  <div id="app">
+    <div class="app__wrapper flex-center">
+      <div class="app__heading">Random Number Generator</div>
+      <div class="app__result" app-result></div>
+      <hr>
+      <form action="" class="app__form flex-center" app-form>
+        <label for="last-number" class="form__label">Random number from 1 to</label>
+        <input id="last-number" class="form__control" placeholder="Enter your number" form-control/>
+        <span class="form__message" form-message></span>
+      </form>
+      <div class="app__btn" btn-random>
+        <i class="fa-solid fa-shuffle"></i>
+        Generate
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
