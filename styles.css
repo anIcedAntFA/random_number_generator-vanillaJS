@@ -16,8 +16,8 @@ html {
   --font-xxlg: 7.2rem;
 
   --red: hsl(348, 100%, 61%);
+  --red-blur: hsl(348, 100%, 98%);
   --blue: hsl(218, 96%, 64%);
-  --green: hsl(154, 91%, 40%);
   --yellow: hsl(48, 100%, 67%);
   --white: hsl(0, 0%, 100%);
   --gray6: hsl(200, 20%, 9%);
@@ -51,9 +51,13 @@ hr {
   color: var(--yellow);
 }
 
+.text-red {
+  color: var(--red);
+}
+
 .app__wrapper {
-  margin: 16rem 32rem;
-  padding: 8rem;
+  margin: 4rem 32rem;
+  padding: 4rem;
   flex-direction: column;
   background: var(--blue);
 }
@@ -65,35 +69,82 @@ hr {
 .app__result {
   margin: 2rem 0 1rem 0;
   font-size: var(--font-xxlg);
-  color: var(--yellow);
 }
 
-.app__form {
+.form__group {
   margin-top: 4rem;
-  flex-wrap: wrap;
-  gap: 2rem;
+
+  display: grid;
+  grid-gap: 3rem;
+  grid-template: 
+    'random random'
+    'from numberFrom'
+    'to numberTo'
+    'message message'
+  ;
+  align-items: center;
+}
+
+.form__group label:nth-child(1) {
+  grid-area: random;
+  justify-self: center;
+}
+
+.form__group label:nth-child(2) {
+  grid-area: from;
+}
+
+.form__group input:nth-child(1) {
+  grid-area: numberFrom;
+}
+
+.form__group label:nth-child(3) {
+  grid-area: to;
+}
+
+.form__group input:nth-child(2) {
+  grid-area: numberTo;
+}
+
+.form__group span {
+  grid-area: message;
+  justify-self: end;
 }
 
 .form__control {
   padding: 1rem;
+  width: 40rem;
   font-size: var(--font-body);
   border: 1px solid transparent;
   border-radius: 6px;
+  outline: none;
+}
+
+.form__group.invalid .form__control {
+  background: var(--red-blur);
+  border-color: var(--red);
+}
+
+.form__group.invalid .form__control:hover {
+  background: var(--white);
 }
 
 .form__message {
   color: var(--red);
 }
 
+.form__group.invalid .form__message {
+  background: var(--white);
+}
+
 .app__btn {
-  margin-top: 6rem;
+  margin-top: 4rem;
   padding: 1rem 2rem;
   border: 1px solid transparent;
   border-radius: 8px;
-  text-transform: uppercase;
-  background: var(--white);
-  color: var(--gray6);
   cursor: pointer;
+  background: var(--yellow);
+  color: var(--gray6);
   transition: all .3s ease-in-out;
 }
 
